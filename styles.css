@@ -1,0 +1,60 @@
+:root{
+  --gap: 12px;
+  --card-bg: #fff;
+  --card-border: #e1e1e1;
+  --accent: #4b7bec;
+  --muted: #666;
+}
+
+*{box-sizing:border-box;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+
+body{
+  margin:0;
+  padding:20px;
+  background:#f6f7fb;
+  color:#111;
+}
+
+.header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:16px;
+}
+
+.btn{
+  background:var(--accent);
+  color:white;
+  border:0;
+  padding:8px 12px;
+  border-radius:6px;
+  cursor:pointer;
+}
+.btn-secondary{
+  background:#ddd;
+  color:#111;
+}
+
+.library-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:var(--gap);
+}
+
+.book-card{
+  background:var(--card-bg);
+  border:1px solid var(--card-border);
+  padding:12px;
+  border-radius:8px;
+  box-shadow:0 1px 3px rgba(0,0,0,0.04);
+}
+
+.book-card h3{margin:0 0 8px 0;font-size:1.05rem;}
+.book-card p{margin:6px 0;color:var(--muted);font-size:0.95rem;}
+.card-row{display:flex;gap:8px;margin-top:10px;}
+
+.dialog{border-radius:8px;padding:0;}
+.book-form{display:flex;flex-direction:column;gap:10px;padding:16px;width:320px;}
+.book-form label{display:flex;flex-direction:column;font-size:0.9rem;}
+.checkbox-label{flex-direction:row;align-items:center;gap:8px;}
+.dialog-menu{display:flex;gap:8px;justify-content:flex-end;margin-top:8px;border-top:1px solid #f0f0f0;padding-top:8px;}

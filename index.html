@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>My Library</h1>
+        <button id="newBookBtn" class="btn">Add New Book</button>
+    </header>
+
+    <main>
+        <!-- ✅ fixed id & class case -->
+        <div id="library" class="library-grid" aria-live="polite">
+            <!-- Books will be dynamically added here -->
+        </div>
+    </main>
+
+    <!-- ✅ fixed class name & added correct form id -->
+    <dialog id="bookDialog" class="dialog">
+        <form id="bookForm" class="book-form">
+            <h2>Add New Book</h2>
+            
+            <label>
+                Title:
+                <input name="title" type="text" required>
+            </label>
+            <label>
+                Author:
+                <input name="author" type="text" required>
+            </label>
+            <label>
+                Pages:
+                <input name="pages" type="number" min="1" required>
+            </label>
+            <label class="checkbox-label">
+                <input name="read" type="checkbox">
+                Have you read it?
+            </label>
+
+            <menu class="dialog-menu">
+                <button type="submit" class="btn">Add Book</button>
+                <button type="button" id="cancelBtn" class="btn btn-secondary">Cancel</button>
+            </menu>
+        </form>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>
